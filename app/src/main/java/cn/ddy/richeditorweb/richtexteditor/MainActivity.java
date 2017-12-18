@@ -41,21 +41,23 @@ import cn.ddy.richeditorweb.richtexteditor.dialogs.PictureHandleDialog;
 import okhttp3.ResponseBody;
 
 
+/**
+ * 在UI上面和功能上边有什么修改的可自行修改
+ * 上传这一块也可自行更换
+ * 需要一定的js编码基础，不然在做交互的时候会比较吃力
+ *
+ *
+ */
 public class MainActivity extends AppCompatActivity implements SimpleRichEditor.OnEditorClickListener, View.OnClickListener {
 
     private static final int REQUEST_CODE_IMAGE = 101;
     private static final String UPLOAD_URL = "http://www.lhbzimo.cn:3000/";
     private static final String PAR_NAME = "images";
-
     private LuBottomMenu mLuBottomMenu;
     private SimpleRichEditor mRichTextView;
-
     private HashMap<Long, String> mInsertedImages;
     private HashMap<Long, String> mFailedImages;
     private Toolbar mToolbar;
-    /**
-     * 发 表
-     */
     private Button mButton;
 
     @SuppressLint({"UseSparseArrays"})
